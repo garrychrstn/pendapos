@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Riwayat Posyandu{% endblock %}
+
+{% block style %}
+    <link rel='stylesheet' type='text/css' href={% static 'all.css' %}>
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <div class='intro'>
+        <h1>Riwayat Posyandu Desa Sumberejo</h1>
+        <form method='POST' action=''>
+            {% csrf_token %}
+            {{ forms }}
+            <button type='submit' name='save'>Filter</button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>NIK</th>
+                <th>Nama</th>
+                <th>Tanggal Lahir</th>
+                <th>Kelamin</th>
+                <th>Nama Ibu</th>
+                <th>Bulan</th>
+                <th>TB</th>
+                <th>BB</th>
+                <th>LL</th>
+                <th>LK</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profil in profils %}
+            {% for posyandu in profil.posyandu_set.all %}
+            <tr>
+                <td>{{ profil.nik }}</td>
+                <td>{{ profil.nama }}</td>
+                <td>{{ profil.tgl }}</td>
+                <td>{{ profil.kelamin }}</td>
+                <td>{{ profil.namaibu }}</td>
+                <td>{{ posyandu.bulan }}</td>
+                <td>{{ posyandu.tb }}</td>
+                <td>{{ posyandu.bb }}</td>
+                <td>{{ posyandu.ll }}</td>
+                <td>{{ posyandu.lk }}</td>
+                <td>{{ posyandu.ket }}</td>
+            </tr>
+            {% endfor %}
+            {% empty %}
+            <tr>
+                <td colspan="11">No data available</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

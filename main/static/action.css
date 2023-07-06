@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #11a79a;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+header a{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+.content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    max-height: 100px ;
+    justify-content: space-between;
+}
+.logo {
+    padding: 10px 0px 60px 10px;
+}
+.menubar ul {
+    padding: 10px 0px 10px 0px;
+    margin-top: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    background: #3d3d3d;
+    width: 100%;
+    margin: auto;
+    font-size: 15px;
+    max-height: 20px;
+}
+.content ul {
+    display: flex;
+    margin-right: 30px;
+    list-style: none;
+
+}
+
+.content li {
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+
+#data {
+    text-decoration: underline;
+}
+
+.form {
+    width: 70%;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.form input {
+    background: none;
+    margin-bottom: 10px;
+    border: gray 1px solid;
+    min-height: 20px;
+    padding: 0px 5px;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form input[type=text], .form input[type=number] {
+    width: 50%;
+}
+
+.form button {
+    padding: 5px;
+    background: #3d3d3d;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    box-shadow: none;
+}
+
+table {
+    margin-left: 100px;
+    width: 70%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.title {
+    margin-top: 40px;
+    width: 60%;
+    margin-left: 250px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    padding: 10px;
+}
+td a {
+    color: white;
+    background: #3d3d3d;
+    text-decoration: none;
+    padding: 5px;
+}
+td a:hover {
+    background: #1e1e1e;
+}
+#sidebar {
+    position: fixed;
+    z-index: 1;
+    display: none;
+    height: 100%;
+    width: 200px;
+    background-color: #3d3d3d;
+    top: 0; left: 0;
+    overflow-x: hidden;
+    padding: 120px 10px 0px 15px;
+}
+#sidebar a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #F7F0F5;
+    font-size: 12px;
+    padding: 10px;
+}
+#sidebar div {
+    margin-bottom: 10px;
+}
+#sidebar span {
+    font-family: 'Montserrat', sans-serif;
+    color: #F7F0F5;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+#sidebar a:hover {
+    background: #1e1e1e;
+}
+.title {
+    display: flex;
+    width: 80%;
+    margin-left: 100px;
+    justify-content: space-between;
+}
+.title form {
+    margin-top: 15px;
+}
+.title input {
+    padding: 5px;
+    width: 200px;
+    background: #f7f0f5;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #3d3d3d;
+}
+.title button {
+    padding: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: none;
+    background: #3d3d3d;
+    color: #F7F0F5;
+    border: 1px solid black;
+}
+.title button:hover {
+    color: #3d3d3d;
+    background: #f5f0f5;
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+    #sidebar {
+        position: fixed;
+        z-index: 1;
+        display: block;
+        height: 100%;
+        width: 200px;
+        background-color: #3d3d3d;
+        top: 0; left: 0;
+        overflow-x: hidden;
+        padding: 160px 10px 0px 15px;
+    }
+    #sidebar a {
+        display: block;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        color: #F7F0F5;
+        font-size: 12px;
+        padding: 10px;
+    }
+    #sidebar div {
+        margin-bottom: 10px;
+    }
+    #sidebar span {
+        font-family: 'Montserrat', sans-serif;
+        color: #F7F0F5;
+        font-weight: bold;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+    #sidebar a:hover {
+        background: #1e1e1e;
+    }
+    .open button {
+        display: none;
+    }    
+    #sidebar h3 {
+        display: none;
+    }
+    .container {
+        margin: auto;
+        margin-left: 150px;
+    }
+
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}Diagnosa Stunting{% endblock %}</title>
+        {% block style %}
+            <link rel=stylesheet type=text/css href={% static 'base.css' %}>
+        {% endblock %}
+        <script type='text/javascript' src={% static 'side.js' %}></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class='content'>
+                <a href='/'>
+                    <div class='logo'>
+                        <h1><img src={% static 'assets/logo.png' %} height='65'></h1>
+                    </div>
+                </a>
+                <ul>
+                    <li>Reference</li>
+                    <li>About Us</li>
+                    <li id='logout'><a href="{% url 'main:logout' %}">Log Out</a></li>
+                </ul>
+            </div>
+            {% comment %} <div class='menubar'>
+                <ul>
+                    <li id='data'><a href='/action'>Data Balita<a></li>
+                    <li id='new'><a href='/input'>Balita baru lahir</a></li>
+                    <li id='riwayat'><a href='/riwayat'>Riwayat Posyandu</a></li>
+                </ul>
+            </div> {% endcomment %}
+        </header>
+        <div class='open'>
+            <button onclick='openNav()'>
+                <img src={% static 'assets/menu.png' %} height='30'>
+            </button>
+        </div>
+        
+        <div id='sidebar'>
+            <div>
+                <h3>
+                    <button onclick='closeNav()'>
+                        <img src={% static 'assets/close.png' %} height='20'>
+                    </button>
+                </h3>
+                <span>Data Balita</span>
+                <a id='data' href='/action'>Data Balita</a>
+                <a id='input' href='/input'>Balita Baru</a>
+            </div>
+            <div>
+                <span>Riwayat Posyandu</span>
+                <a id='desa' href='/riwayat'>Desa Sumberejo</a>
+                <a id='kadipeso' href='/riwayat/kadipeso'>&rarr; Posyandu Kadipeso</a>
+                <a id='dumpul' href='/riwayat/dumpul'>&rarr; Posyandu Dumpul</a>
+                <a id='sumberejo' href='/riwayat/sumberejo'>&rarr; Posyandu Sumberejo</a>
+                <a id='kerjo' href='/riwayat/kerjo'>&#8594; Posyandu Kerjo</a>
+                <a id='plandakan' href='/riwayat/plandakan'>&rarr; Posyandu Plandakan</a>
+                <a id='derso' href='/riwayat/derso'>&rarr; Posyandu Derso</a>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

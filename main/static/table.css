@@ -1,0 +1,87 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F7F0F5;
+}
+
+header {
+    background-color: #11a79a;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+.content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    max-height: 100px ;
+    justify-content: space-between;
+}
+.logo {
+    padding: 10px 0px 60px 10px;
+}
+.sidebar {
+    position: fixed;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 200px;
+    background-color: #3d3d3d;
+    top: 0; left: 0;
+    overflow-x: hidden;
+    padding: 120px 10px 0px 15px;
+}
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #F7F0F5;
+    font-size: 12px;
+    padding: 10px;
+}
+.sidebar div {
+    margin-bottom: 10px;
+}
+.sidebar span {
+    font-family: 'Montserrat', sans-serif;
+    color: #F7F0F5;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.sidebar a:hover {
+    background: #1e1e1e;
+}
+/* Each CSS */
+.content ul {
+    display: flex;
+    margin-right: 30px;
+    list-style: none;
+
+}
+
+.content li {
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+
+table {
+    margin: auto;
+    width: 70%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+

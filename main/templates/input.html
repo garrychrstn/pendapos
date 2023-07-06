@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registrasi Profil Balita{% endblock %}
+
+{% block style %}
+    <link rel='stylesheet' type='text/css' href={% static 'input.css' %}>
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <div id='intro'>
+        <h1>Isi Data Balita Baru Lahir</h1>
+    </div>
+    <div id='form'>
+        <form method='POST' action=''>
+            {% csrf_token %}
+            {{ profilform.as_p }}
+            <button type='submit' name='save'>Save</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
